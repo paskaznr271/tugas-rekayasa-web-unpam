@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero-section {
+      background-color: #f8e8e8;
+      color: #5a5a5a;
+      padding: 50px 0;
+    }
+    .gallery-item {
+      margin-bottom: 30px;
+    }
+    .gallery-item img {
+      height: 200px; /* Set a fixed height */
+      object-fit: cover; /* Maintain aspect ratio while cropping */
+      width: 100%; /* Make the image take the full width */
+      border-radius: 8px; /* Optional: Add border radius for a softer look */
+    }
+    .footer {
+      background-color: #f5c6cb;
+      padding: 20px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+    }
+    .price-tag {
+      color: #ff4081;
+      font-size: 1.2rem;
+    }
+    .purchase-section {
+      background-color: #f0f8ff;
+      padding: 30px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Skincare.com</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tugas-form-sederhana-231011700948.html">Newsletter</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tugas-checkbox-radio-231011700948.html">Survey</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tugas-dropdown-textarea-231011700948.html">Dropdown</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tugas-registrasi-validasi-231011700948.html">Registrasi</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tugas-advance-components-231011700948.html">Pemesanan</a> 
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="container-fluid hero-section text-center">
+  <div class="row">
+    <div class="col-lg-6 col-md-12 my-auto">
+      <h1>Explore Our Colorful Skincare Collection</h1>
+      <p>Brighten your beauty routine with our wide range of skincare products, curated for every type of skin!</p>
+    </div>
+    <div class="col-lg-6 col-md-12">
+      <img src="logo.png" class="img-fluid" alt="Skincare Hero Image">
+    </div>
+  </div>
+</div>
+
+<!-- Gallery Section -->
+<div id="gallery" class="container py-5">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 gallery-item">
+      <img src="mois.webp" class="img-fluid" alt="Skincare 1">
+      <h5 class="mt-2">Moisturizer Skintific</h5>
+      <p class="price-tag">Rp 120.000</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#purchaseModal" data-product="Moisturizer Skintific" data-price="120000">Beli Sekarang</button>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 gallery-item">
+      <img src="serum.webp" class="img-fluid" alt="Skincare 2">
+      <h5 class="mt-2">Serum Skintific</h5>
+      <p class="price-tag">Rp 78.000</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#purchaseModal" data-product="Serum Skintific" data-price="78000">Beli Sekarang</button>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 gallery-item">
+      <img src="cleanser.png" class="img-fluid" alt="Skincare 3">
+      <h5 class="mt-2">Cleanser Skintific</h5>
+      <p class="price-tag">Rp 37.000</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#purchaseModal" data-product="Cleanser Skintific" data-price="37000">Beli Sekarang</button>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 gallery-item">
+      <img src="makeup.webp" class="img-fluid" alt="Skincare 4">
+      <h5 class="mt-2">Makeup Skintific</h5>
+      <p class="price-tag">Rp 75.000</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#purchaseModal" data-product="Makeup Skintific" data-price="75000">Beli Sekarang</button>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 gallery-item">
+      <img src="masker.jpg" class="img-fluid" alt="Skincare 5">
+      <h5 class="mt-2">Masker Mugwort Skintific</h5>
+      <p class="price-tag">Rp 81.000</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#purchaseModal" data-product="Masker Mugwort Skintific" data-price="81000">Beli Sekarang</button>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 gallery-item">
+      <img src="eyecream.avif" class="img-fluid" alt="Skincare 6">
+      <h5 class="mt-2">Eye Cream</h5>
+      <p class="price-tag">Rp 20.500</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#purchaseModal" data-product="Eye Cream" data-price="20500">Beli Sekarang</button>
+    </div>
+  </div>
+</div>
+
+<!-- Purchase Modal -->
+<div class="modal fade" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="purchaseModalLabel">Pembelian Produk</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="productName" class="form-label">Nama Produk</label>
+            <input type="text" class="form-control" id="productName" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="productPrice" class="form-label">Harga</label>
+            <input type="text" class="form-control" id="productPrice" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Jumlah</label>
+            <input type="number" class="form-control" id="quantity" value="1" min="1">
+          </div>
+          <div class="mb-3">
+            <label for="customerName" class="form-label">Nama Anda</label>
+            <input type="text" class="form-control" id="customerName" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Kirim Pesanan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer id="contact" class="footer">
+  <p>Contact us: <a href="mailto:info@skincare-shop.com">info@skincare-shop.com</a> | Phone: 021-2434-5831</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // JavaScript to populate the modal with product details
+  const purchaseModal = document.getElementById('purchaseModal');
+  purchaseModal.addEventListener('show.bs.modal', event => {
+    const button = event.relatedTarget; // Button that triggered the modal
+    const product = button.getAttribute('data-product');
+    const price = button.getAttribute('data-price');
+
+    // Update the modal's content
+    const productNameInput = purchaseModal.querySelector('#productName');
+    const productPriceInput = purchaseModal.querySelector('#productPrice');
+    productNameInput.value = product;
+    productPriceInput.value = `Rp ${price}`;
+  });
+</script>
+</body>
+</html>

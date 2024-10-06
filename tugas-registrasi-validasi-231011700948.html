@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi Skincare</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fce4ec;
+      font-family: 'Arial', sans-serif;
+    }
+    .registration-form {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 40px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .registration-form h3 {
+      color: #ff4081;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .registration-form label {
+      color: #5a5a5a;
+    }
+    .registration-form .btn-submit {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+    }
+    .registration-form .btn-submit:hover {
+      background-color: #e3376d;
+    }
+    .form-text {
+      font-size: 0.85rem;
+      color: #ff4081;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <div class="registration-form">
+    <h3>Registrasi Akun Skincare</h3>
+    <form id="registrationForm" action="#" method="post" novalidate>
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Nama Lengkap</label>
+        <input type="text" class="form-control" id="fullName" name="fullName" required>
+        <div class="invalid-feedback">
+          Nama lengkap tidak boleh kosong.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+        <div class="invalid-feedback">
+          Masukkan format email yang valid.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" minlength="8" required>
+        <div class="invalid-feedback">
+          Password harus minimal 8 karakter.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Konfirmasi Password</label>
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+        <div class="invalid-feedback">
+          Password harus sama dengan konfirmasi password.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-submit w-100">Daftar</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Custom Bootstrap validation for the form
+(function () {
+  'use strict'
+
+  const form = document.querySelector('#registrationForm')
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault()
+    event.stopPropagation()
+
+    const password = document.getElementById('password').value
+    const confirmPassword = document.getElementById('confirmPassword').value
+
+    if (form.checkValidity() === false || password !== confirmPassword) {
+      if (password !== confirmPassword) {
+        document.getElementById('confirmPassword').classList.add('is-invalid')
+      } else {
+        document.getElementById('confirmPassword').classList.remove('is-invalid')
+      }
+      form.classList.add('was-validated')
+    } else {
+      alert('Registrasi berhasil!')
+      form.reset()
+    }
+  }, false)
+})()
+</script>
+
+</body>
+</html>

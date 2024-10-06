@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemesanan Tiket Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fce4ec;
+      font-family: 'Arial', sans-serif;
+    }
+    .ticket-order-form {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 40px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .ticket-order-form h3 {
+      color: #ff4081;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .ticket-order-form label {
+      color: #5a5a5a;
+    }
+    .ticket-order-form .btn-submit {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+    }
+    .ticket-order-form .btn-submit:hover {
+      background-color: #e3376d;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <div class="ticket-order-form">
+    <h3>Pemesanan Tiket Online Skincare</h3>
+    <form id="ticketOrderForm" action="#" method="post" novalidate>
+      <div class="mb-3">
+        <label for="date" class="form-label">Tanggal Pemesanan</label>
+        <input type="text" class="form-control datepicker" id="date" name="date" required>
+        <div class="invalid-feedback">
+          Harap pilih tanggal pemesanan.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="ticketCount" class="form-label">Jumlah Tiket</label>
+        <input type="number" class="form-control" id="ticketCount" name="ticketCount" min="1" value="1" required>
+        <div class="invalid-feedback">
+          Jumlah tiket tidak boleh kurang dari 1.
+        </div>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+        <label class="form-check-label" for="terms">Saya setuju dengan syarat dan ketentuan</label>
+        <div class="invalid-feedback">
+          Anda harus menyetujui syarat dan ketentuan.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-submit w-100">Pesan Tiket</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script>
+// Custom Bootstrap validation for the form
+(function () {
+  'use strict'
+
+  const form = document.querySelector('#ticketOrderForm')
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault()
+    event.stopPropagation()
+
+    if (form.checkValidity() === false) {
+      form.classList.add('was-validated')
+    } else {
+      alert('Pemesanan tiket berhasil!')
+      form.reset()
+    }
+  }, false)
+
+  // Initialize date picker
+  $('.datepicker').datepicker({
+    format: 'yyyy-mm-dd',
+    autoclose: true,
+    todayHighlight: true
+  });
+})()
+</script>
+
+</body>
+</html>

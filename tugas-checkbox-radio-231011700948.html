@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare Customer Survey</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Skincare Customer Survey Form -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Skincare Customer Survey</h2>
+  <form action="#" method="POST">
+    
+    <!-- Question 1: Age Group -->
+    <div class="mb-3">
+      <label class="form-label">What is your age group?</label>
+      <div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="ageGroup" id="age1" value="Under 18" required>
+          <label class="form-check-label" for="age1">Under 18</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="ageGroup" id="age2" value="18-24">
+          <label class="form-check-label" for="age2">18-24</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="ageGroup" id="age3" value="25-34">
+          <label class="form-check-label" for="age3">25-34</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="ageGroup" id="age4" value="35 and above">
+          <label class="form-check-label" for="age4">35 and above</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 2: Skin Type -->
+    <div class="mb-3">
+      <label class="form-label">What is your skin type?</label>
+      <div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="skinType[]" id="skin1" value="Oily">
+          <label class="form-check-label" for="skin1">Oily</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="skinType[]" id="skin2" value="Dry">
+          <label class="form-check-label" for="skin2">Dry</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="skinType[]" id="skin3" value="Combination">
+          <label class="form-check-label" for="skin3">Combination</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="skinType[]" id="skin4" value="Sensitive">
+          <label class="form-check-label" for="skin4">Sensitive</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 3: Product Interest -->
+    <div class="mb-3">
+      <label class="form-label">Which skincare products are you most interested in? (Select all that apply)</label>
+      <div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="productInterest[]" id="product1" value="Moisturizers">
+          <label class="form-check-label" for="product1">Moisturizers</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="productInterest[]" id="product2" value="Cleansers">
+          <label class="form-check-label" for="product2">Cleansers</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="productInterest[]" id="product3" value="Sunscreen">
+          <label class="form-check-label" for="product3">Sunscreen</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="productInterest[]" id="product4" value="Toners">
+          <label class="form-check-label" for="product4">Toners</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="productInterest[]" id="product5" value="Face Masks">
+          <label class="form-check-label" for="product5">Face Masks</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary w-100 mb-3">Submit Survey</button>
+
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
